@@ -17,9 +17,6 @@ test-results/
 playwright-report/
 playwright/.cache/
 
-# Generated test font cache (regenerable via `npm run fixtures:fonts`)
-tests/fixtures/fonts/cache/
-
 # Logs
 logs/
 *.log

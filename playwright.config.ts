@@ -11,7 +11,7 @@ export default defineConfig({
   globalSetup: './tests/e2e/global-setup.ts',
   globalTeardown: './tests/e2e/global-teardown.ts',
   snapshotPathTemplate:
-    'tests/e2e/__snapshots__/{testFilePath}/{arg}-{projectName}{ext}',
+    'tests/e2e/__snapshots__/{testFilePath}/{arg}-{projectName}-{snapshotSuffix}{ext}',
   expect: {
     toHaveScreenshot: {
       maxDiffPixelRatio: 0.02,
