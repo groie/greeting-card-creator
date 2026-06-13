@@ -1,7 +1,7 @@
 import { test, expect } from './fixtures';
 import { gotoDesignStep } from './helpers/flow';
 
-test.beforeEach(({}, testInfo) => {
+test.beforeEach((_fixtures, testInfo) => {
   testInfo.skip(testInfo.project.name !== 'desktop', 'Export dropdown is desktop-targeted');
 });
 
