@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install
       - run: npm run lint
 
   type-check:
@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install
       - run: npx tsc --noEmit
 
   build:
@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install
       - run: npm run build
 
   unit-tests:
@@ -48,7 +48,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install
       - run: npm run test:coverage
       - uses: actions/upload-artifact@v4
         if: always()
@@ -66,7 +66,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install
       - name: Cache Playwright browsers
         uses: actions/cache@v4
         id: playwright-cache

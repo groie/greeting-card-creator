@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-      - run: npm ci
+      - run: npm install
       - name: Cache Playwright browsers
         uses: actions/cache@v4
         id: playwright-cache
