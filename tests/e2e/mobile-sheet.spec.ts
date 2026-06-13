@@ -1,7 +1,7 @@
 import { test, expect } from './fixtures';
 import { gotoDesignStep } from './helpers/flow';
 
-test.beforeEach((_, testInfo) => {
+test.beforeEach(({}, testInfo) => {
   testInfo.skip(testInfo.project.name !== 'mobile', 'mobile-only');
 });
 
