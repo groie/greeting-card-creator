@@ -1,0 +1,46 @@
+{
+  "name": "greeting-card-creator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test --update-snapshots",
+    "test:e2e:ui": "playwright test --ui",
+    "coverage:merge": "node scripts/merge-coverage.mjs",
+    "test:all": "npm run test:coverage && npm run test:e2e && npm run coverage:merge",
+    "fixtures:images": "node tests/fixtures/generate-images.mjs",
+    "fixtures:fonts": "node tests/fixtures/fonts/fetch.mjs"
+  },
+  "dependencies": {
+    "fabric": "^7.4.0",
+    "lucide-react": "^1.17.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-easy-crop": "^6.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^4.1.8",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^29.1.1",
+    "monocart-coverage-reports": "^2.12.12",
+    "postcss": "^8.4.49",
+    "sharp": "^0.35.1",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vitest": "^4.1.8"
+  }
+}
